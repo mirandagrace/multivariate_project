@@ -26,4 +26,5 @@ Temporary Items
 .apdisk
 
 # data files
-/build_table/data_files/*
+/data_tables/data_files/*
+/data_tables/*.csv
