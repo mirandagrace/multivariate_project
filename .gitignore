@@ -28,3 +28,5 @@ Temporary Items
 # data files
 /data_tables/data_files/*
 /data_tables/*.csv
+
+.ipynb*
