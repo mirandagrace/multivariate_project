@@ -24,3 +24,10 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# data fies
+data_tables/data_files/*.csv
+data_tables/*.csv
+
+# python notebook files
+.ipynb_*
