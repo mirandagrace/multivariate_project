@@ -25,8 +25,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# data files
-/data_tables/data_files/*
-/data_tables/*.csv
+# data fies
+data_tables/data_files/*.csv
+data_tables/*.csv
 
-.ipynb*
+# python notebook files
+.ipynb_*
