@@ -1,0 +1,12 @@
+#!/bin/bash
+
+ftp -d -i -o 'data_files/' ftp://ftp.ncdc.noaa.gov/pub/data/swdi/stormevents/csvfiles/ <<ftpEOF
+mget StormEvents_*.csv.gz
+quit
+ftpEOF
+
+gunzip data_files/*.gz 
+
+cat data_files/StormEvents_details*.csv | LC_ALL=C sed '/BEGIN_YEARMONTH/d' > storm_details.csv
+cat data_files/StormEvents_fatalities*.csv | sed '/FAT_YEARMONTH/d'> storm_fatalities.csv
+cat data_files/StormEvents_locations*.csv | sed '/YEARMONTH/d' > storm_locations.csv
